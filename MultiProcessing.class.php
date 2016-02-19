@@ -49,9 +49,9 @@ class MultiProcesses
     public function __construct(array $config = [])
     {
         $this->workerNum = isset($config["workerNum"]) ? intval($config["workerNum"]) : $this->workerNum;
-        $this->reActive = isset($config["reActive"]) ? intval($config["reActive"]) : $this->reActive;
-        $this->user = isset($config["user"]) ? intval($config["user"]) : posix_getlogin();
-        $this->title = isset($config["title"]) ? intval($config["title"]) : $this->title;
+        $this->reActive = isset($config["reActive"]) ? $config["reActive"] : $this->reActive;
+        $this->user = isset($config["user"]) ? $config["user"] : posix_getlogin();
+        $this->title = isset($config["title"]) ? $config["title"] : $this->title;
 
         set_time_limit(0);
         ob_implicit_flush();
