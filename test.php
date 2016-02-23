@@ -1,5 +1,5 @@
 <?php
-require("MultiProcessing.class.php");
+require("MultiProcesses.class.php");
 
 $worker = new MultiProcesses(
     [
