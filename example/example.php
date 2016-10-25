@@ -1,6 +1,8 @@
 <?php
 
-require("MultiProcesses.class.php");
+require __DIR__.'/../vendor/autoload.php';
+
+use MultiProcesses\MultiProcesses;
 
 $worker = new MultiProcesses([
         "workerNum" => 5,
