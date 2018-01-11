@@ -130,7 +130,7 @@ class MultiProcesses {
                     echo "进程被意外杀死 \n";
                     if ($this->reActive) {
                         echo "正在重新启动新的子进程 \n";
-                        $this->forkWorker($this->$workerId);
+                        $this->forkWorker($workerId);
                         echo "子进程启动成功!!! \n";
                     }
                 }
